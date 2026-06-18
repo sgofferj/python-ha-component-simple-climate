@@ -1,0 +1,25 @@
+[MASTER]
+ignore=CVS
+ignore-patterns=
+jobs=1
+load-plugins=
+
+[MESSAGES CONTROL]
+disable=
+    E0401,
+    E0402,
+    R0903,
+    R0912,
+    R0915,
+    W0212,
+    W0613
+
+[REPORTS]
+output-format=colorized
+score=yes
+
+[DESIGN]
+max-attributes=20
+max-branches=25
+max-statements=80
+min-public-methods=1

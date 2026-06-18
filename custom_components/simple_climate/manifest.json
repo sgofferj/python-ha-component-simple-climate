@@ -1,0 +1,12 @@
+{
+  "domain": "simple_climate",
+  "name": "Simple Climate",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/sgofferj/python-ha-component-simple-climate",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@sgofferj"],
+  "iot_class": "local_polling",
+  "integration_type": "device"
+}

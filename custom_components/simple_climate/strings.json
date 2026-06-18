@@ -1,0 +1,50 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Simple Climate",
+        "description": "Configure your simple climate controller.",
+        "data": {
+          "name": "Name",
+          "inside_sensor": "Inside temperature sensor",
+          "outside_sensor": "Outside temperature sensor (optional)",
+          "heat_switch": "Heating switch",
+          "cool_switch": "Cooling switch",
+          "target_temperature_low": "Heat setpoint",
+          "target_temperature_high": "Cool setpoint",
+          "hysteresis": "Hysteresis",
+          "outside_check_heat": "Check outside temp before heating",
+          "outside_check_cool": "Check outside temp before cooling",
+          "enable_heat": "Enable heat mode",
+          "enable_cool": "Enable cool mode",
+          "default_mode": "Default operating mode",
+          "safety_shutdown_low": "Cool safety min temp (0 = off)",
+          "safety_shutdown_high": "Heat safety max temp (0 = off)"
+        }
+      }
+    },
+    "options": {
+      "step": {
+        "init": {
+          "title": "Simple Climate Options",
+          "description": "Modify your climate controller settings.",
+          "data": {
+            "inside_sensor": "Inside temperature sensor",
+            "outside_sensor": "Outside temperature sensor (optional)",
+            "heat_switch": "Heating switch",
+            "cool_switch": "Cooling switch",
+            "target_temperature_low": "Heat setpoint",
+            "target_temperature_high": "Cool setpoint",
+            "hysteresis": "Hysteresis",
+            "outside_check_heat": "Check outside temp before heating",
+            "outside_check_cool": "Check outside temp before cooling",
+            "enable_heat": "Enable heat mode",
+            "enable_cool": "Enable cool mode",
+            "safety_shutdown_low": "Cool safety min temp (0 = off)",
+            "safety_shutdown_high": "Heat safety max temp (0 = off)"
+          }
+        }
+      }
+    }
+  }
+}

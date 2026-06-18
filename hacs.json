@@ -1,0 +1,7 @@
+{
+  "name": "Simple Climate",
+  "render_readme": true,
+  "iot_class": "Local Polling",
+  "domains": ["climate"],
+  "homeassistant": "2024.1.0"
+}
