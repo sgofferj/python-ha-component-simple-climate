@@ -307,7 +307,8 @@ class SimpleClimate(ClimateEntity, RestoreEntity):
             return
 
         if hvac == HVACMode.COOL:
-            await self._async_set_effector(heat_switch, False)
+            if heat_switch != cool_switch:
+                await self._async_set_effector(heat_switch, False)
 
             setpoint = (
                 self.target_temperature_high or self._attr_target_temperature_high
@@ -335,7 +336,8 @@ class SimpleClimate(ClimateEntity, RestoreEntity):
                 await self._async_set_effector(cool_switch, False)
 
         elif hvac == HVACMode.HEAT:
-            await self._async_set_effector(cool_switch, False)
+            if heat_switch != cool_switch:
+                await self._async_set_effector(cool_switch, False)
 
             setpoint = self.target_temperature_low or self._attr_target_temperature_low
             heater_on = self._is_effector_on(heat_switch)
@@ -436,7 +438,7 @@ class SimpleClimate(ClimateEntity, RestoreEntity):
             self._get_config(CONF_HEAT_SWITCH),
             self._get_config(CONF_COOL_SWITCH),
         ]
-        sensors_to_track = [s for s in sensors_to_track if s]
+        sensors_to_track = list(set(s for s in sensors_to_track if s))
 
         self._unsub_listeners.append(
             async_track_state_change_event(
